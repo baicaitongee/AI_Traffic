@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="pure-menu pure-menu-horizontal"id="manager-menu">
+
+    <ul class="pure-menu-list" id="manager-menu">
+        <li class="pure-menu-item"><a href="{{ url_for('readersearch') }}" class="pure-menu-link">违章记录查询</a> </li>
+         <li class="pure-menu-item"><a href="{{ url_for('booksearch') }}" class="pure-menu-link">区域查询</a> </li>
+       
+        <li class="pure-menu-item"><a href="{{ url_for('addbook') }}" class="pure-menu-link">增添区域</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('deletebook') }}" class="pure-menu-link">删除区域</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('bookalterselect') }}" class="pure-menu-link">修改区域</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('addreader') }}" class="pure-menu-link">增添违章记录</a> </li>
+        <li class="pure-menu-item"><a href="{{ url_for('deletereader') }}" class="pure-menu-link">删除违章记录</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('readeralterselect') }}" class="pure-menu-link">修改违章记录</a></li>
+  
+        <li class="pure-menu-item"><a href="{{ url_for('register')}}" class="pure-menu-link">智能监控地理位置</a></li>
+    </ul>
+</div>
+    <form class="pure-form pure-form-aligned"method="post"name="增添读者">
+    {{ form.csrf_token }}
+    <fieldset>
+        <div class="pure-control-group">
+            <label for="name">驾驶证号</label>
+            {{ form.no }}
+        </div>
+
+        <div class="pure-control-group">
+            <label for="password">姓名</label>
+            {{ form.name }}
+        </div>
+
+        <div class="pure-control-group">
+            <label for="email">性别</label>
+            {{ form.gender }}
+        </div>
+
+        <div class="pure-control-group">
+            <label for="foo">所在组号</label>
+            {{  form.grade}}
+        </div>
+
+        <div class="pure-control-group">
+            <label for="foo">--</label>
+            {{  form.department}}
+        </div>
+
+        <div class="pure-control-group">
+            <label for="foo">类别</label>
+            {{ form.kind }}
+        </div>
+
+        <div class="pure-control-group">
+            <label for="foo">密码</label>
+            {{ form.password }}
+        </div>
+
+        <div class="pure-control-group">
+            <label for="foo">手机号码</label>
+            {{ form.phone }}
+        </div>
+        <div class="pure-control-group">
+            <label for="foo">经度</label>
+            {{ form.longtitude }}
+        </div>
+        <div class="pure-control-group">
+            <label for="foo">纬度</label>
+            {{ form.latitude }}
+        </div>
+        <div class="pure-control-group">
+            <label for="foo">IDcard</label>
+            {{ form.IDcard}}
+        </div>
+        <div class="pure-controls">
+            <button type="submit" class="pure-button pure-button-primary">提交</button>
+        </div>
+    </fieldset>
+</form>
+
+{% endblock %}

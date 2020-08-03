@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="pure-menu pure-menu-horizontal"id="manager-menu">
+
+    <ul class="pure-menu-list"id="manager-menu">
+         <li class="pure-menu-item"><a href="{{ url_for('borrowinfo') }}" class="pure-menu-link">--</a> </li>
+        <li class="pure-menu-item"><a href="{{ url_for('returninfo') }}" class="pure-menu-link">--</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('myinfo') }}" class="pure-menu-link">我的信息</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('mygroupinfo') }}" class="pure-menu-link">--</a></li>
+         <li class="pure-menu-item"><a href="{{ url_for('groupmap') }}" class="pure-menu-link">--</a></li>
+    </ul>
+</div>
+<table class="pure-table">
+<thead>
+<tr>
+    <th>组号</th>
+    <th>所在教室</th>
+    <th>组长</th>
+    <th>组员2</th>
+    <th>组员3</th>
+    <th>组员4</th>
+    <th>组员5</th>
+    <th>组员6</th>
+
+</tr>
+</thead>
+<tbody>
+
+<tr align="center">
+<td>{{ readers.id }}</td>
+<td>{{ readers.room }}</td>
+<td>{{ readers.id1}}</td>
+<td>{{ readers.id2 }}</td>
+<td>{{ readers.id3 }}</td>
+
+<td>{{ readers.id4 }}</td>
+<td>{{ readers.id5 }}</td>
+<td>{{ readers.id6 }}</td>
+
+</tr>
+
+</tbody>
+
+</table>
+{% endblock %}

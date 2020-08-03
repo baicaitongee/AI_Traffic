@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="pure-menu pure-menu-horizontal"id="manager-menu">
+
+    <ul class="pure-menu-list"id="manager-menu">
+        <li class="pure-menu-item"><a href="{{ url_for('readersearch') }}" class="pure-menu-link">查询</a> </li>
+         <li class="pure-menu-item"><a href="{{ url_for('booksearch') }}" class="pure-menu-link">--查询</a> </li>
+      
+        <li class="pure-menu-item"><a href="{{ url_for('addbook') }}" class="pure-menu-link">增添</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('deletebook') }}" class="pure-menu-link">删除</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('bookalterselect') }}" class="pure-menu-link">修改</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('addreader') }}" class="pure-menu-link">增添</a> </li>
+        <li class="pure-menu-item"><a href="{{ url_for('deletereader') }}" class="pure-menu-link">删除</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('readeralterselect') }}" class="pure-menu-link">修改--</a></li>
+
+        <li class="pure-menu-item"><a href="{{ url_for('register')}}" class="pure-menu-link">实时位置</a></li>
+    </ul>
+</div>
+{% endblock %}

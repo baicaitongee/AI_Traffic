@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="pure-menu pure-menu-horizontal"id="reader-menu">
+
+    <ul class="pure-menu-list" >
+        <li class="pure-menu-item"><a href="{{ url_for('borrowinfo') }}" class="pure-menu-link">我的--</a> </li>
+        <li class="pure-menu-item"><a href="{{ url_for('returninfo') }}" class="pure-menu-link">我的--</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('myinfo') }}" class="pure-menu-link">我的信息</a></li>
+         <li class="pure-menu-item"><a href="{{ url_for('mygroupinfo') }}" class="pure-menu-link">我的组</a></li>
+
+    </ul>
+    </div>
+<table class="pure-table">
+<thead>
+<tr>
+    <th>工号</th>
+    <th>姓名</th>
+    <th>类别</th>
+    <th>性别</th>
+    <th>所在小组编号</th>
+    <th>--</th>
+    <th>联系方式</th>
+    <th>--</th>
+    <th>--</th>
+    <th>--</th>
+</tr>
+</thead>
+<tbody>
+<tr align="center">
+<td>{{ reader.no}}</td>
+<td>{{ reader.name }}</td>
+    {% if reader.kind==0 %}
+    <td>普通</td>
+        {% elif reader.kind==1 %}
+        <td>组长</td>
+        {% elif reader.kind==2 %}
+        <td>管理员</td>
+        {% else %}
+        <td></td>
+    {% endif %}
+    <td>{{ reader.gender }}</td>
+    <td>{{ reader.grade }}</td>
+    <td>{{ reader.department }}</td>
+    <td>{{ reader.phone }}</td>
+    <td>{{ reader.longtitude }}</td>
+    <td>{{ reader.latitude }}</td>
+
+</tr>
+</tbody>
+
+
+</table>
+{% endblock %}

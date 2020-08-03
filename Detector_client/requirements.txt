@@ -1,0 +1,5 @@
+numpy
+tensorflow-gpu
+imutils
+pillow
+hyperlpr

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="pure-menu pure-menu-horizontal"id="manager-menu">
+
+    <ul class="pure-menu-list" >
+        <li class="pure-menu-item"><a href="{{ url_for('readersearch') }}" class="pure-menu-link">人员查询</a> </li>
+         <li class="pure-menu-item"><a href="{{ url_for('booksearch') }}" class="pure-menu-link">库室查询</a> </li>
+         <li class="pure-menu-item"><a href="{{ url_for('groupsearch') }}" class="pure-menu-link">小组查询</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('addbook') }}" class="pure-menu-link">增添库室</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('deletebook') }}" class="pure-menu-link">删除库室</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('bookalterselect') }}" class="pure-menu-link">修改库室</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('addreader') }}" class="pure-menu-link">增添人员</a> </li>
+        <li class="pure-menu-item"><a href="{{ url_for('deletereader') }}" class="pure-menu-link">删除人员</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('readeralterselect') }}" class="pure-menu-link">修改人员</a></li>
+  <li class="pure-menu-item"><a href="{{ url_for('addgroup') }}" class="pure-menu-link">增加小组</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('deletegroup') }}" class="pure-menu-link">删除小组</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('groupalterselect') }}" class="pure-menu-link">修改小组</a></li>
+        <li class="pure-menu-item"><a href="" class="pure-menu-link">库室借还</a></li>
+        <li class="pure-menu-item"><a href="{{ url_for('register')}}" class="pure-menu-link">人员实时位置</a></li>
+    </ul>
+</div>
+<table class="pure-table">
+<thead>
+<tr>
+    <th>工号</th>
+    <th>库室编号</th>
+    <th>借库室日期</th>
+    <th>截止日期</th>
+
+</tr>
+</thead>
+<tbody>
+{% for p in overday_info %}
+<tr align="center">
+<td>{{ p.reader_no }}</td>
+<td>{{ p.book_id }}</td>
+<td>{{ p.borrow_date}}</td>
+<td>{{ p.return_date }}</td>
+
+</tr>
+{% endfor %}
+</tbody>
+
+
+</table>
+{% endblock %}

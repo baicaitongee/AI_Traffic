@@ -1,0 +1,4 @@
+Flask
+matplotlib
+opencv-python
+shutil

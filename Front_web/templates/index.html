@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+    <meta name="description" content="Violate Responsive Admin Template">
+    <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+    <title>主页</title>
+
+    <!-- CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/animate.min.css" rel="stylesheet">
+    <link href="static/css/font-awesome.min.css" rel="stylesheet">
+    <link href="static/css/form.css" rel="stylesheet">
+    <link href="static/css/calendar.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/icons.css" rel="stylesheet">
+    <link href="static/css/generics.css" rel="stylesheet">
+</head>
+<body id="skin-blur-violate">
+<header id="header" class="media"><a id="menu-toggle"></a> <a class="logo pull-left" href="index.html">DATEWHILE 1.0</a>
+    <div class="media-body">
+        <div class="media" id="top-menu">
+            <div class="pull-left tm-icon"><a data-drawer="messages" class="drawer-toggle" href=""> <i
+                    class="sa-top-message"></i> <span>Messages</span> </a></div>
+            <div class="pull-left tm-icon"></div>
+            <div id="time" class="pull-right"><span id="hours"></span> : <span id="min"></span> : <span id="sec"></span>
+            </div>
+            <div class="media-body">
+                <input type="text" class="main-search">
+            </div>
+        </div>
+    </div>
+</header>
+<div class="clearfix"></div>
+<section id="main" class="p-relative" role="main">
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+
+        <!-- Sidbar Widgets -->
+        <div class="side-widgets overflow">
+            <!-- Profile Menu -->
+            <div class="text-center s-widget m-b-25 dropdown" id="profile-menu"><a href="" data-toggle="dropdown"> <img
+                    class="profile-pic animated" src="static/img/tupian.jpg" alt=""> </a>
+                <ul class="dropdown-menu profile-menu">
+                    <li><a href="">My Profile</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
+                    </li>
+                    <li><a href="">Messages</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                    <li><a href="">Settings</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                    <li><a href="">Sign Out</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                </ul>
+                <h4 class="m-0">战云智能</h4>
+            </div>
+
+            <!-- Calendar -->
+            <div class="s-widget m-b-25">
+                <div id="sidebar-calendar"></div>
+            </div>
+
+            <!-- Feeds -->
+            <!-- Projects -->
+            <div class="s-widget m-b-25">
+                <h2 class="tile-title"> 用户相关信息 </h2>
+                <div class="s-widget-body">
+                    <div class="side-border"> ID：
+                        <small>0001</small>
+{#                        <div class="progress progress-small"><a href="#" data-toggle="tooltip" title=""#}
+{#                                                                class="progress-bar tooltips progress-bar-danger"#}
+{#                                                                style="width: 60%;" data-original-title="60%"> <span#}
+{#                                class="sr-only">60% Complete</span> </a></div>#}
+                    </div>
+                    <div class="side-border"> 交通违章积分：
+                        <small>20</small>
+                        <div class="progress progress-small"><a href="#" data-toggle="tooltip" title=""
+                                                                class="tooltips progress-bar progress-bar-info"
+                                                                style="width: 43%;" data-original-title="43%"> <span
+                                class="sr-only">43% Complete</span> </a></div>
+                    </div>
+{#                    <div class="side-border">#}
+{#                        <div class="progress progress-small"><a href="#" data-toggle="tooltip" title=""#}
+{#                                                                class="tooltips progress-bar progress-bar-warning"#}
+{#                                                                style="width: 81%;" data-original-title="81%"> <span#}
+{#                                class="sr-only">81% Complete</span> </a></div>#}
+{#                    </div>#}
+{#                    <div class="side-border">#}
+{#                        <div class="progress progress-small"><a href="#" data-toggle="tooltip" title=""#}
+{#                                                                class="tooltips progress-bar progress-bar-success"#}
+{#                                                                style="width: 10%;" data-original-title="10%"> <span#}
+{#                                class="sr-only">10% Complete</span> </a></div>#}
+{#                    </div>#}
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Side Menu -->
+        <ul class="list-unstyled side-menu">
+            <li class="active"><a class="sa-side-home" href="index.html"> <span class="menu-item">Dashboard</span> </a>
+            </li>
+
+
+            <li><a class="sa-side-chart" href="charts.html"> <span class="menu-item">Charts</span> </a></li>
+            <li><a class="sa-side-folder" href="file-manager.html"> <span class="menu-item">File Manager</span> </a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Content -->
+    <section id="content" class="container">
+
+        <!-- Messages Drawer -->
+        <div id="messages" class="tile drawer animated">
+            <div class="listview narrow">
+                <div class="media"><a href="">Send a New Message</a> <span class="drawer-close">&times;</span></div>
+                <div class="overflow" style="height: 254px">
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/1.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">Nadin Jackson - 2 Hours ago</small>
+                            <br>
+                            <a class="t-overflow" href="">Mauris consectetur urna nec tempor adipiscing. Proin sit amet
+                                nisi ligula. Sed eu adipiscing lectus</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/2.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">David Villa - 5 Hours ago</small>
+                            <br>
+                            <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod
+                                nunc quis gravida. Suspendisse pharetra</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/3.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">Harris worgon - On 15/12/2013</small>
+                            <br>
+                            <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla
+                                eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar,
+                                ornare turpis id</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/4.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">Mitch Bradberry - On 14/12/2013</small>
+                            <br>
+                            <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique
+                                vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel
+                                blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/1.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">Nadin Jackson - On 15/12/2013</small>
+                            <br>
+                            <a class="t-overflow" href="">Ipsum wintoo consectetur urna nec tempor adipiscing. Proin sit
+                                amet nisi ligula. Sed eu adipiscing lectus</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/2.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">David Villa - On 16/12/2013</small>
+                            <br>
+                            <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod
+                                nunc quis gravida. Suspendisse pharetra</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/3.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">Harris worgon - On 17/12/2013</small>
+                            <br>
+                            <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla
+                                eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar,
+                                ornare turpis id</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/4.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">Mitch Bradberry - On 18/12/2013</small>
+                            <br>
+                            <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique
+                                vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel
+                                blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/5.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">Wendy Mitchell - On 19/12/2013</small>
+                            <br>
+                            <a class="t-overflow" href="">Integer a eros dapibus, vehicula quam accumsan, tincidunt
+                                purus</a></div>
+                    </div>
+                </div>
+                <div class="media text-center whiter l-100"><a href="">
+                    <small>VIEW ALL</small>
+                </a></div>
+            </div>
+        </div>
+
+        <!-- Notification Drawer -->
+        <div id="notifications" class="tile drawer animated">
+            <div class="listview narrow">
+                <div class="media"><a href="">Notification Settings</a> <span class="drawer-close">&times;</span></div>
+                <div class="overflow" style="height: 254px">
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/1.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">Nadin Jackson - 2 Hours ago</small>
+                            <br>
+                            <a class="t-overflow" href="">Mauris consectetur urna nec tempor adipiscing. Proin sit amet
+                                nisi ligula. Sed eu adipiscing lectus</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/2.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">David Villa - 5 Hours ago</small>
+                            <br>
+                            <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod
+                                nunc quis gravida. Suspendisse pharetra</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/3.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">Harris worgon - On 15/12/2013</small>
+                            <br>
+                            <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla
+                                eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar,
+                                ornare turpis id</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/4.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">Mitch Bradberry - On 14/12/2013</small>
+                            <br>
+                            <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique
+                                vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel
+                                blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/1.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">Nadin Jackson - On 15/12/2013</small>
+                            <br>
+                            <a class="t-overflow" href="">Ipsum wintoo consectetur urna nec tempor adipiscing. Proin sit
+                                amet nisi ligula. Sed eu adipiscing lectus</a></div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left"><img width="40" src="static/img/profile-pics/2.jpg" alt=""></div>
+                        <div class="media-body">
+                            <small class="text-muted">David Villa - On 16/12/2013</small>
+                            <br>
+                            <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod
+                                nunc quis gravida. Suspendisse pharetra</a></div>
+                    </div>
+                </div>
+                <div class="media text-center whiter l-100"><a href="">
+                    <small>VIEW ALL</small>
+                </a></div>
+            </div>
+        </div>
+
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb hidden-xs">
+            <li><a href="#">Home</a></li>
+        </ol>
+        <h4 class="page-title">Information</h4>
+        <!-- Shortcuts -->
+        <hr class="whiter"/>
+
+        <!-- Quick Stats -->
+
+        <hr class="whiter"/>
+
+        <!-- Main Widgets -->
+
+        <div class="block-area">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Main Chart -->
+                    <div class="tile">
+                        <h2 class="tile-title">历史记录</h2>
+                        <div class="tile-config dropdown"><a data-toggle="dropdown" href="" class="tile-menu"></a>
+                            <ul class="dropdown-menu pull-right text-right">
+                                <li><a class="tile-info-toggle" href="">Chart Information</a></li>
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Settings</a></li>
+                            </ul>
+                        </div>
+                        <div class="p-10">
+
+
+                            <script src="static/js/roomSlider.js"></script>
+
+                            <style>
+                                * {
+                                    margin: 0;
+                                    padding: 0;
+                                }
+
+                                #slide {
+
+                                    width: 520px;
+                                    height: 250px;
+
+                                }
+
+                                #ddd {
+
+                                    width: 800px;
+                                    height: 510px;
+                                    margin-top: 200px;
+
+                                }
+
+                                #prev {
+                                    font-size: 14px;
+                                    position: absolute;
+                                    left: 0px;
+                                    top: 130px;
+                                    z-index: 2;
+                                    background: #333;
+                                    color: #fff;
+                                    padding: 4px;
+                                    opacity: 0.5;
+                                    border-style: none;
+                                    outline: none;
+                                    cursor: pointer;
+                                    display: none;
+
+                                }
+
+                                #next {
+                                    font-size: 14px;
+                                    position: absolute;
+                                    right: 0px;
+                                    top: 130px;
+                                    z-index: 2;
+                                    background: #333;
+                                    color: #fff;
+                                    padding: 4px;
+                                    opacity: 0.5;
+                                    border-style: none;
+                                    outline: none;
+                                    cursor: pointer;
+                                    display: none;
+
+                                }
+
+
+                            </style>
+
+                            <div id="slide" align="center" style="height: 250px">
+                                <div id="zhanshi" align="center">
+                                    {#            轮播图#}
+                                    {% for i in filelist %}
+                                        <img src={{ './static/pic_history/'+i }} height="250px" width="520px">
+                                    {% endfor %}
+                                    <script type="text/javascript">
+                                        function refresh2() {
+                                            $(function () {
+                                                $.get('/shuaxintu', function (data) {
+                                                    var zhanshi = document.getElementById("zhanshi")
+                                                    zhanshi.innerHTML = ""
+                                                    for (i = 0; i < data.length; i++) {
+
+                                                        str = './static/pic_history/' + data[i]
+                                                        {#alert(str)#}
+                                                        str ='<img src='+ str + ' height=\"250px\" width=\"520px\">'
+                                                        {#alert(str)#}
+                                                        zhanshi.innerHTML += str;
+
+                                                    }
+                                                    {#alert(data)#}
+                                                });
+                                            });
+
+                                        }
+
+                                        setInterval(refresh2, 3000)
+
+
+                                    </script>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <script>
+                            {#window.onload = function () {#}
+                            {#    #}
+
+                            {#                                这个onload方法是在页面加载完成后 使用的一个函数#}
+
+
+                            var a = new RoomSlider('slide');
+
+
+                        </script>
+                    </div>
+
+                    <!-- Pies -->
+                    <div class="tile">
+                        <h2 class="tile-title">大分类统计图</h2>
+                        <div id="container2" style="height: 300px"></div>
+                        {#                        刷新#}
+                        <script type="text/javascript">
+                            function refresh() {
+                                $(function () {
+                                    $.get('/shuaxin', function (data) {
+                                        myChart.setOption({
+                                            series: [{
+                                                // 根据名字对应到相应的系列
+                                                name: '数量',
+                                                data: data[0]
+                                            }]
+                                        });
+                                        myChart3.setOption({
+                                            series: [{
+                                                // 根据名字对应到相应的系列
+                                                name: '数量',
+                                                data: data[1]
+                                            }]
+                                        });
+                                    });
+                                });
+
+                            }
+
+                            setInterval(refresh, 1000)
+                            {#    一秒读一次数据，进行刷新显示，echart里的数据重赋值#}
+
+                        </script>
+                        <script type="text/javascript">
+                            var dom = document.getElementById("container2");
+                            var myChart = echarts.init(dom);
+                            var app = {};
+                            option = null;
+
+                            function fetchData(cb) {
+                                // 通过 setTimeout 模拟异步加载
+                                setTimeout(function () {
+                                    cb({
+                                        categories: ["闯红灯", "超速", "不礼让行人", "车流量"],
+                                        data: [5, 20, 36, 10]
+                                    });
+                                }, 1000);
+                            }
+
+                            // 初始 option
+                            option = {
+//	color:['#ED7C30','#80FF80','#FF8096','#800080'],
+//    title: {
+//        text: '异步数据加载示例'
+//    },
+                                tooltip: {},
+                                legend: {
+                                    data: ['数量'],
+                                    textStyle: {//图例文字的样式
+                                        color: '#ccc'
+//            fontSize:16
+                                    }
+
+
+                                },
+                                xAxis: {
+                                    data: [],
+
+                                    axisLine: {
+                                        lineStyle: {
+                                            color: '#fff'
+                                        }
+                                    },
+                                },
+                                yAxis: {
+                                    //y轴颜色
+                                    axisLine: {
+                                        lineStyle: {
+                                            color: '#fff '
+                                        }
+                                    },
+                                },
+
+                                series: [{
+                                    name: '数量',
+                                    type: 'bar',
+                                    data: []
+                                }]
+                            };
+
+                            fetchData(function (data) {
+                                myChart.setOption({
+                                    xAxis: {
+                                        data: data.categories
+                                    },
+                                    series: [{
+                                        // 根据名字对应到相应的系列
+                                        name: '数量',
+                                        data: data.data
+                                    }]
+                                });
+                            });
+                            ;
+                            if (option && typeof option === "object") {
+                                myChart.setOption(option, true);
+                            }
+                        </script>
+
+                    </div>
+
+                    <!--  Recent Postings -->
+                    <div class="row">
+                        <div class="col-md-6"></div>
+
+                        <!-- Tasks to do -->
+                        <div class="col-md-6"></div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-6">
+                    <!-- USA Map -->
+                    <div class="tile">
+                        <h2 class="tile-title">实时展示</h2>
+                        <div class="tile-config dropdown">
+                            <ul class="dropdown-menu pull-right text-right">
+
+                            </ul>
+                        </div>
+                        <div style="height: 270px">
+                            <img src="{{ url_for('video_feed') }}" height="270px" width="536px">
+                        </div>
+                        <!--			  在线显示   可以通过chrome右键检查查看元素长宽属性，进行修改img里面的height和width-->
+                    </div>
+
+                    <!-- Dynamic Chart -->
+                    <div class="tile">
+                        <h2 class="tile-title">小分类统计图</h2>
+                        <div class="tile-config dropdown">
+                            <ul class="dropdown-menu pull-right text-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Settings</a></li>
+                            </ul>
+                        </div>
+
+                        <div id="container3" style="height: 300px"></div>
+                        <script type="text/javascript">
+                            var dom3 = document.getElementById("container3");
+                            var myChart3 = echarts.init(dom3);
+                            var app3 = {};
+                            option3 = null;
+
+                            function fetchData3(cb) {
+                                // 通过 setTimeout 模拟异步加载
+                                setTimeout(function () {
+                                    cb({
+                                        categories: ["本地", "外地", "扣分", "1","2","3","4"],
+                                        data: [0, 0, 0, 0,0,0,0]
+                                    });
+                                }, 1000);
+                            }
+
+                            // 初始 option
+                            option3 = {
+//	color:['#ED7C30','#80FF80','#FF8096','#800080'],
+//    title: {
+//        text: '异步数据加载示例'
+//    },
+                                tooltip: {},
+                                legend: {
+                                    data: ['数量'],
+                                    textStyle: {//图例文字的样式
+                                        color: '#ccc'
+//            fontSize:16
+                                    }
+
+
+                                },
+                                xAxis: {
+                                    data: [],
+
+                                    axisLine: {
+                                        lineStyle: {
+                                            color: '#fff'
+                                        }
+                                    },
+                                },
+                                yAxis: {
+                                    //y轴颜色
+                                    axisLine: {
+                                        lineStyle: {
+                                            color: '#fff '
+                                        }
+                                    },
+                                },
+
+                                series: [{
+                                    name: '数量',
+                                    type: 'bar',
+                                    data: []
+                                }]
+                            };
+
+                            fetchData3(function (data) {
+                                myChart3.setOption({
+                                    xAxis: {
+                                        data: data.categories
+                                    },
+                                    series: [{
+                                        // 根据名字对应到相应的系列
+                                        name: '数量',
+                                        data: data.data
+                                    }]
+                                });
+                            });
+                            ;
+                            if (option && typeof option === "object") {
+                                myChart3.setOption(option3, true);
+                            }
+                        </script>
+
+                    </div>
+                </div>
+
+                <!-- Activity --> </div>
+            <div class="clearfix"></div>
+        </div>
+        </div>
+
+        <!-- Chat -->
+    </section>
+
+    <!-- Older IE Message -->
+    <!--[if lt IE 9]>
+                <div class="ie-block">
+                    <h1 class="Ops">Ooops!</h1>
+                    <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser in order to access the maximum functionality of this website. </p>
+                    <ul class="browsers">
+                        <li>
+                            <a href="https://www.google.com/intl/en/chrome/browser/">
+                                <img src="static/img/browsers/chrome.png" alt="">
+                                <div>Google Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.mozilla.org/en-US/firefox/new/">
+                                <img src="static/img/browsers/firefox.png" alt="">
+                                <div>Mozilla Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com/computer/windows">
+                                <img src="static/img/browsers/opera.png" alt="">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://safari.en.softonic.com/">
+                                <img src="static/img/browsers/safari.png" alt="">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-10/worldwide-languages">
+                                <img src="static/img/browsers/ie.png" alt="">
+                                <div>Internet Explorer(New)</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
+                </div>   
+            <![endif]-->
+</section>
+
+<!-- Javascript Libraries -->
+<!-- jQuery -->
+<script src="static/js/jquery.min.js"></script> <!-- jQuery Library -->
+<script src="static/js/jquery-ui.min.js"></script> <!-- jQuery UI -->
+<script src="static/js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+
+<!-- Bootstrap -->
+<script src="static/js/bootstrap.min.js"></script>
+
+<!-- Charts -->
+<script src="static/js/charts/jquery.flot.js"></script> <!-- Flot Main -->
+<script src="static/js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
+<script src="static/js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
+<script src="static/js/charts/jquery.flot.resize.min.js"></script>
+<!-- Flot sub - for repaint when resizing the screen -->
+
+<script src="static/js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
+<script src="static/js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
+<script src="static/js/charts.js"></script> <!-- All the above chart related functions -->
+
+<!-- Map -->
+<script src="static/js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
+<script src="static/js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
+
+<!--  Form Related -->
+<script src="static/js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+
+<!-- UX -->
+<script src="static/js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+
+<!-- Other -->
+<script src="static/js/calendar.min.js"></script> <!-- Calendar -->
+<script src="static/js/feeds.min.js"></script> <!-- News Feeds -->
+
+<!-- All JS functions -->
+<script src="static/js/functions.js"></script>
+</body>
+</html>
